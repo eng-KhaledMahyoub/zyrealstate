@@ -1,0 +1,868 @@
+/* 
+    /=-=-=-=- Using Library -=-=-=-=-=/
+
+    1- //////// CSS Bootstrap 5
+    2- /////// Fontawesome 5
+    3- ////// 
+*/
+
+/* 
+    /=-=-=-=- structure comment -=-=-=-=/
+
+    1- font
+    2- Common Style
+    3- General Style
+    4- Sections
+        4.1 /////// page 1
+        4.2 /////// page 2
+        4.3 /////// page 3
+        4.4 /////// page 4
+        4.5 /////// page 5
+        4.6 /////// page 6
+*/
+
+
+
+/*=-=-=-=-=-=-=-=-=-=-=- Common Style -=-=-=-=-=-=-=-=-=-=-=*/
+body {
+    background: var(--Black);
+    position: relative;
+    text-align: start;
+}
+
+.container {
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 15px;
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+:root {
+    --Black: #000;
+    --White: #FFF;
+    --Fallow: #BBA16F;
+}
+
+.active {
+    color: var(--Black);
+    background: var(--PattensBlue);
+    border: 1px solid var(--RockBlue);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #444;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Fallow);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- General Styels -=-=-=-=-=-=-=-=-=-=-=*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+/* p {
+    margin: 0
+} */
+
+section {
+    margin-block: 50px;
+}
+
+img {
+    width: 100%;
+}
+
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- Commen Style -=-=-=-=-=-=-=-=-=-=-=*/
+
+.overlay+img {
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(1);
+    /* Google Chrome, Safari 6+ & Opera 15+ */
+    filter: grayscale(1);
+}
+
+.overlay+img:hover {
+    -webkit-filter: grayscale(0);
+    filter: none;
+}
+
+
+/* .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    transition: background-color .2s
+}
+
+.overlay:hover {
+    background-color: transparent;
+} */
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- page 1 -=-=-=-=-=-=-=-=-=-=-=*/
+/*=-=- Common Section -=-=*/
+.about-company__parent :is(.about-company__title, h4),
+.products__parent :is(.products__titel, h4),
+.partners__title,
+.products__titles {
+    color: var(--Fallow);
+    font-family: bold;
+}
+
+.about-company__parent,
+.products__parent {
+    padding-block-end: 100px;
+}
+
+.border-dash {
+    border-bottom: 2px dashed var(--Fallow);
+}
+
+.products__titel,
+.partners__title,
+.products__titles {
+    text-align: center;
+}
+
+/*=-=- Style -=-=*/
+/* Section about compant */
+.about-company__title {
+    font-size: 38px;
+    color: var(--Fallow);
+}
+
+.about-company__content {
+    padding-block: 12px;
+}
+
+.about-company__content h4 {
+    font-size: 28px;
+}
+
+.about-company__content p {
+    font-size: 20px;
+    text-align: justify;
+    color: var(--White);
+}
+
+.about-company__image {
+    width: 70%;
+    position: relative;
+    margin-inline-start: auto;
+}
+
+.line {
+    position: absolute;
+    border: 5px solid var(--Fallow);
+    width: 100%;
+    height: 100%;
+    inset-block-start: 30px;
+    inset-inline-end: 40px;
+    z-index: -1;
+}
+
+@media (max-width: 992px) {
+    .about-company__image {
+        width: 90%;
+        margin-block-start: 50px;
+        margin-inline: auto 0;
+    }
+
+}
+
+/* section products */
+.products__parent>div {
+    justify-content: space-between
+}
+
+.products__titel {
+    padding-block-end: 40px;
+}
+
+.products__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    border: 5px solid var(--Fallow);
+    padding-block-end: 25px;
+}
+
+.products__img {
+    position: relative;
+    inset-inline-start: 20px;
+    inset-block-end: 20px;
+}
+
+.products__content {
+    text-align: center;
+    padding-block-end: 15px;
+}
+
+.products__content h4 {
+    font-size: 30px;
+}
+
+.products__content p {
+    color: var(--White);
+    width: 70%;
+    margin-inline: auto;
+}
+
+@media (max-width: 576px) {
+    .products__img {
+        inset-inline-start: 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .products__card {
+        margin-block: 30px;
+    }
+
+}
+
+/* partners */
+.partners {
+    background-color: var(--White);
+}
+
+.partners__title {
+    font-size: 30px;
+    margin-block-end: 0;
+    padding-block-end: 20px;
+    background-color: var(--Black)
+}
+
+.partners__items {
+    height: 100px
+}
+
+/* Footer */
+/*=-=- Coment Section -=-=*/
+.footer__title p,
+.footer__communication ul li,
+.footer__social ul a {
+    color: var(--White);
+}
+
+/*=-=- Style -=-=*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer h4 {
+    font-size: 27px;
+    color: var(--Fallow)
+}
+
+.footer__title p {
+    width: 90%;
+    margin: 0;
+}
+
+.footer__social {
+    text-align: center;
+}
+
+.footer__social ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__social li {
+    font-size: 20px;
+    padding-inline: 5px;
+}
+
+@media (max-width: 576px) {
+    .footer {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .footer__title p {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .footer>div:not(:first-child) {
+        margin-block-start: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        width: 100%;
+    }
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- About Page -=-=-=-=-=-=-=-=-=-=-=*/
+/* Section About Company Page2 */
+/*=-=- Common page2 -=-=*/
+.size .about-company__content {
+    width: 90%;
+}
+
+.size .about-company__content p {
+    width: 90%;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+.size .about-company__image {
+    width: 100%;
+    margin-block-end: 50px;
+
+}
+
+/*=-=- Style -=-=*/
+.page2 .about-company__parent {
+    padding-block-end: 0;
+}
+
+.page2 .about-company__content {
+    margin-block-start: 50px;
+}
+
+/* Section Company Message */
+.about-company.Objectives {
+    margin-block-start: 100px;
+}
+
+.company-message {
+    margin-block-start: 20px;
+}
+
+.company-message__content {
+    margin-block-end: 30px;
+}
+
+.company-message__content h2 {
+    color: var(--Fallow);
+    font-family: bold;
+    font-size: 35px;
+}
+
+.company-message__content p {
+    color: var(--White);
+    font-size: 27px;
+    text-align: justify;
+}
+
+@media (max-width: 576px) {
+    .page2 .about-company__content {
+        width: 100%;
+        margin-block-start: 0;
+    }
+
+    .size .about-company__content,
+    .size .about-company__content p {
+        width: 100%;
+    }
+
+    .size .about-company__image {
+        width: 80%;
+        margin-inline: auto 0;
+        margin-block-start: 0;
+    }
+}
+
+/*=-=- About Company Objectives -=-=*/
+.Objectives .about-company__content {
+    margin-inline-start: auto;
+}
+
+.about-company__btn {
+    display: flex;
+    justify-content: end;
+}
+
+.about-company__btn a {
+    display: block;
+    color: #000;
+    background: var(--Fallow);
+    padding-inline: 40px;
+    padding-block: 25px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.about-company__btn button {
+    display: block;
+    color: #000;
+    background: var(--Fallow);
+    padding-inline: 40px;
+    padding-block: 25px;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- Serves Page -=-=-=-=-=-=-=-=-=-=-=*/
+.serves .products__titel,
+.products__titles {
+    font-size: 50px;
+    padding-block-end: 150px
+}
+
+.serves .products__img {
+    inset-inline-start: 40px;
+    inset-block-end: 40px;
+}
+
+.serves .products__content h4 {
+    font-size: 40px;
+}
+
+.serves .products__content p {
+    width: auto;
+    height: 110px;
+    margin-inline: 20px;
+}
+
+@media (max-width: 576px) {
+    .serves .products__img {
+        inset-inline-start: 15px;
+    }
+
+    .serves .products__content h4 {
+        font-size: 30px;
+    }
+
+    .serves .products__content p {
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .serves .products__card:not(:last-child) {
+        margin-block: 30px;
+    }
+
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- Project Page -=-=-=-=-=-=-=-=-=-=-=*/
+.project .products__content {
+    padding-block-end: 0;
+}
+
+.project .about-company__btn {
+    justify-content: center;
+    margin-block-start: 50px;
+}
+
+@media (max-width: 992px) {
+    .project .products__card:not(:last-child) {
+        margin-block: 80px;
+    }
+
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- Design Servece Page -=-=-=-=-=-=-=-=-=-=-=*/
+.products .design-serves {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.design-serves .products__img {
+    width: 350px;
+    height: 350px;
+}
+
+.design-serves .products__card:nth-child(1),
+.design-serves .products__card:nth-child(3) {
+    position: relative;
+    bottom: 90px;
+}
+
+.design-serves .products__card:nth-child(2),
+.design-serves .products__card:nth-child(4) {
+    position: relative;
+    top: 90px;
+}
+
+.design-serves .products__card:nth-child(1) {
+    inset-inline-start: 70px;
+}
+
+.design-serves .products__card:nth-child(1) .products__img {
+    inset-block-start: 40px;
+}
+
+.design-serves .products__card:nth-child(3) .products__img {
+    inset-inline-start: -40px;
+    inset-block-start: 40px;
+}
+
+.design-serves .products__card:nth-child(4) {
+    inset-inline-end: 70px;
+}
+
+.design-serves .products__card:nth-child(4) .products__img {
+    inset-inline-start: -40px;
+}
+
+@media (max-width: 768px) {
+    .products .design-serves {
+        flex-direction: column;
+    }
+
+    .design-serves .products__img {
+        width: 100%;
+        height: auto;
+    }
+
+    .design-serves .products__card:nth-child(1) .products__img,
+    .design-serves .products__card:nth-child(2) .products__img,
+    .design-serves .products__card:nth-child(3) .products__img,
+    .design-serves .products__card:nth-child(4) .products__img {
+        inset-inline-start: 15px;
+    }
+
+    .design-serves .products__card:nth-child(1) {
+        inset-inline-start: 0;
+        bottom: 0;
+    }
+
+    .design-serves .products__card:nth-child(1) .products__img {
+        height: auto;
+        inset-block-start: -40px;
+    }
+
+    .design-serves .products__card:nth-child(2),
+    .design-serves .products__card:nth-child(4) {
+        top: 0;
+    }
+
+    .design-serves .products__card:nth-child(1),
+    .design-serves .products__card:nth-child(3) {
+        bottom: 0;
+        height: auto;
+    }
+
+    .design-serves .products__card:nth-child(3) .products__img {
+        inset-block-start: -40px;
+    }
+
+    .design-serves .products__card:nth-child(4) {
+        inset-inline-end: 0px;
+    }
+}
+
+@media (min-width: 768.98px) and (max-width: 1024px) {
+    .products .design-serves {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .products .design-serves .products__card:nth-child(3),
+    .products .design-serves .products__card:nth-child(4) {
+        margin-block-start: 80px;
+    }
+
+    .design-serves .products__card:nth-child(1) {
+        inset-inline-start: 0
+    }
+
+    .design-serves .products__card:nth-child(1) .products__img {
+        inset-block-start: unset;
+    }
+
+
+    .design-serves .products__card:nth-child(2),
+    .design-serves .products__card:nth-child(4) {
+        top: 0;
+    }
+
+    .design-serves .products__card:nth-child(1),
+    .design-serves .products__card:nth-child(3) {
+        bottom: 0;
+    }
+
+    .design-serves .products__card:nth-child(3) .products__img {
+        inset-inline-start: 40px;
+        inset-block-start: unset;
+    }
+
+    .design-serves .products__card:nth-child(4) {
+        inset-inline-end: 0;
+    }
+
+    .design-serves .products__card:nth-child(4) .products__img {
+        inset-inline-start: 40px;
+    }
+}
+
+/*=-=-=-=-=-=-=-=-=-=-=-=- Contact -=-=-=-=-=-=-=-=-=-=-=*/
+.contact-us__parent {
+    padding-block-end: 100px;
+}
+
+.contact-us__form {
+    margin-inline-start: 20px;
+}
+
+.contact-us__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-us__input {
+    width: 49%;
+    margin-block-end: 30px;
+}
+
+.contact-us__input input,
+select.contact-us__input {
+    height: 80px;
+    border-radius: 15px;
+    color: #a1a1a1;
+    background-color: #dbdcdf;
+}
+
+.checkBox {
+    display: flex;
+}
+
+.checkBox__input {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    margin-inline-end: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: #fff;
+}
+
+/* Hide the browser's default checkbox */
+.checkBox__input input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 2px solid var(--White);
+    border-radius: 5px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox__input input:checked~.checkmark {
+    background-color: var(--Fallow);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox__input .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.contact-us__textarea {
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    outline: none;
+    color: #a1a1a1;
+    border-radius: 20px;
+    margin-block-end: 50px
+}
+
+.contact-us__sendData {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.contact-us__form .about-company__btn a {
+    padding-inline: 70px;
+    border-radius: 35px;
+}
+
+.contact-us__file {
+    width: 300px;
+    height: 100%;
+    overflow: hidden;
+    background: var(--Fallow);
+    padding-inline: 45px;
+    padding-block: 25px;
+    border-radius: 40px;
+    margin-inline-end: 40px;
+    font-size: 25px;
+    position: relative;
+    color: black;
+}
+
+.contact-us__file i {
+    font-size: 40px;
+    position: absolute;
+    inset-inline-end: 75px;
+    inset-block-start: 20px;
+}
+
+.contact-us__file input {
+    opacity: 0;
+    width: 400px;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+}
+
+@media (max-width: 786px) {
+    .contact-us__form {
+        margin-inline-start: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-us__inputs {
+        flex-direction: column;
+    }
+
+    .contact-us__input {
+        width: 100%;
+    }
+
+    .contact-us__sendData {
+        flex-direction: column;
+    }
+
+    .contact-us__file {
+        width: 100%;
+        margin-inline-end: 0;
+        margin-block-end: 30px;
+    }
+
+    .contact-us__form .about-company__btn,
+    .contact-us__form .about-company__btn a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.slider-eight {
+    margin-block: 0px;
+}
+
+.home-products-card {
+    height: 570px;
+}
+
+
+@media (min-width: 1200px) {
+    .sponsor-eight {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+
+
+.preloader .icon{
+    animation-name: stop;
+    background-size: 250px 250px;
+}

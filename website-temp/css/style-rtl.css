@@ -1,0 +1,247 @@
+
+@font-face {
+    font-family: light;
+    src: url(../font/NeoSansArabicLight.woff) format('woff');
+
+}
+
+@font-face {
+    font-family: regular;
+    src: url(../font/neo-sans-arabic-regular.ttf);
+}
+
+@font-face {
+    font-family: medium;
+    src: url(../font/NeoSansArabicMedium.woff) format('woff');
+
+}
+
+@font-face {
+    font-family: bold;
+    src: url(../font/NeoSansArabicBold.woff) format('woff');
+
+}
+
+
+
+:root {
+    --thm-font: regular;
+    --thm-b-font: regular;
+}
+
+a,h1,h2,h3,h4,h5,h6,input,textarea,p{
+    font-family: regular;
+}
+
+body {
+    font-family: regular;
+    text-align: start;
+}
+
+.about-company__parent :is(.about-company__title, h4),
+.products__parent :is(.products__titel, h4),
+.partners__title {
+    color: var(--Fallow);
+    font-family: bold !important;
+}
+
+
+.company-message__content h2 {
+    color: var(--Fallow);
+    font-family:  bold;
+    font-size: 35px;
+}
+
+.mobile-nav__container li a {
+    font-family: var(--thm-font);
+}
+
+.header-eight__topbar__info li i {
+    color: var(--thm-base);
+    font-size: 16px;
+    margin-left: 11px;
+}
+
+.header-eight__topbar__right p {
+    font-size: 14px;
+    color: #acb5cb;
+    margin: 0;
+    margin-left: 30px;
+    margin-right: 0px;
+}
+
+.mainmenu-eight__call {
+    text-align: right;
+    color: #fff;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;
+    padding-right: 40px;
+    margin-right: 40px;
+    padding-left: 0px;
+    margin-left: 0px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.mainmenu-eight__call__icon {
+    margin-left: 20px;
+}
+
+.service-eight__card__inner::before {
+    line-height: 1;
+    font-size: 60px;
+    color: #eef0f6;
+    font-family: "Shadows Into Light";
+    content: counters(serviceNumber, ".", decimal-leading-zero);
+    position: absolute;
+    left: 35px;
+    right: auto;
+    bottom: 35px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    opacity: 1;
+}
+
+.sidebar .services ul li a:after {
+    position: absolute;
+    left: 0;
+    right: auto;
+    top: -1px;
+    font-family: "Flaticon";
+    content: "\f15f";
+    opacity: 1;
+    font-size: 10px;
+    line-height: 48px;
+    font-weight: 700;
+    z-index: 1;
+}
+
+.main-menu .navigation>li {
+    float: right;
+    margin-left: 40px;
+    margin-right: 0px;
+
+
+}
+
+
+.main-menu .navigation>li>ul {
+    right: 0px;
+}
+
+
+.mainmenu-eight .nav-outer .mobile-nav-toggler {
+    float: none;
+    margin: 0;
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+
+.page-banner .bread-crumb li:before {
+    position: absolute;
+    left: -15px;
+    right: auto;
+    width: 30px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    content: "-";
+}
+
+.page-banner .bread-crumb li {
+    position: relative;
+    float: right;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ccd6df;
+    font-weight: 400;
+    text-transform: uppercase;
+    cursor: default;
+    padding-left: 15px;
+    padding-right: 0px;
+    margin-left: 15px;
+    margin-right: 20px;
+    letter-spacing: 0.1em;
+    font-family: var(--thm-font);
+}
+
+.page-banner .bread-crumb li {
+    letter-spacing: 0px;
+}
+
+
+.contact-info-two__card i {
+    font-size: 20px;
+    color: var(--thm-base);
+    margin-left: 20px;
+    margin-right: 0px;
+}
+
+
+.about-eleven__images::before {
+    content: '';
+    width: 20px;
+    height: 326px;
+    background-color: var(--thm-base);
+    color: var(--thm-base);
+    position: absolute;
+    left: 100%;
+    top: 40px;
+    right: auto;
+}
+
+
+.get-quote-two .info ul li {
+    position: relative;
+    display: block;
+    min-height: 60px;
+    padding-right: 85px;
+    padding-left: 0px;
+    line-height: 28px;
+    padding-top: 5px;
+    margin-bottom: 20px;
+}
+
+.get-quote-two .info ul li .icon {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    line-height: 30px;
+    padding: 15px 10px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: var(--thm-base);
+    border-radius: 50%;
+    font-size: 16px;
+    color: var(--thm-black);
+}
+
+.header-eight__topbar__social {
+    margin-right: 20px;
+    margin-left: 0px;
+}
+
+.phone-footer {
+    unicode-bidi: plaintext;
+}
+
+input[type="email"] {
+    text-align: right;
+}
+
+.events-one__meta li i {
+    color: var(--thm-base);
+    margin-left: 10px;
+    width: 18px;
+    margin-right: 0px;
+}
+
+.header-eight__topbar__social a {
+    margin-left: 20px;
+}
